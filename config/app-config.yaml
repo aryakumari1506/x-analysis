@@ -1,0 +1,37 @@
+# Application Configuration
+app:
+  name: "Sentiment Analysis Dashboard"
+  version: "1.0.0"
+
+# Hadoop Configuration
+hadoop:
+  namenode_host: "localhost"
+  namenode_port: 9000
+  hdfs_base_path: "/sentiment_data"
+
+# Hive Configuration
+hive:
+  host: "localhost"
+  port: 10000
+  database: "sentiment_db"
+
+# Spark Configuration
+spark:
+  app_name: "SentimentAnalysis"
+  master: "local[*]"
+  executor_memory: "2g"
+  driver_memory: "1g"
+
+# Twitter API (Use environment variables)
+twitter:
+  bearer_token: "${TWITTER_BEARER_TOKEN}"
+  consumer_key: "${TWITTER_CONSUMER_KEY}"
+  consumer_secret: "${TWITTER_CONSUMER_SECRET}"
+  access_token: "${TWITTER_ACCESS_TOKEN}"
+  access_token_secret: "${TWITTER_ACCESS_TOKEN_SECRET}"
+
+# Processing Configuration
+processing:
+  batch_size: 1000
+  processing_interval: 300  # 5 minutes
+  sentiment_threshold: 0.1
